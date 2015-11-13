@@ -14,7 +14,7 @@
 		626F811D1BF2D8A900B77864 /* photosFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F811C1BF2D8A900B77864 /* photosFrameworkTests.m */; };
 		626F81281BF2D8A900B77864 /* photosFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81271BF2D8A900B77864 /* photosFrameworkUITests.m */; };
 		626F81361BF2D8BB00B77864 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626F81351BF2D8BB00B77864 /* Photos.framework */; };
-		626F81391BF31C5F00B77864 /* HMImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81381BF31C5F00B77864 /* HMImagePickerViewController.m */; };
+		626F81391BF31C5F00B77864 /* HMPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81381BF31C5F00B77864 /* HMPhotoPickerViewController.m */; };
 		626F813D1BF31C8A00B77864 /* HMAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F813B1BF31C8A00B77864 /* HMAlbumViewController.m */; };
 		626F813E1BF31C8A00B77864 /* HMAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626F813C1BF31C8A00B77864 /* HMAlbumViewController.xib */; };
 		626F81481BF338F700B77864 /* HMAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81461BF338F700B77864 /* HMAlbumTableViewCell.m */; };
@@ -66,8 +66,8 @@
 		626F81271BF2D8A900B77864 /* photosFrameworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photosFrameworkUITests.m; sourceTree = "<group>"; };
 		626F81291BF2D8A900B77864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626F81351BF2D8BB00B77864 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		626F81371BF31C5F00B77864 /* HMImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMImagePickerViewController.h; sourceTree = "<group>"; };
-		626F81381BF31C5F00B77864 /* HMImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMImagePickerViewController.m; sourceTree = "<group>"; };
+		626F81371BF31C5F00B77864 /* HMPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoPickerViewController.h; sourceTree = "<group>"; };
+		626F81381BF31C5F00B77864 /* HMPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoPickerViewController.m; sourceTree = "<group>"; };
 		626F813A1BF31C8A00B77864 /* HMAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAlbumViewController.h; sourceTree = "<group>"; };
 		626F813B1BF31C8A00B77864 /* HMAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAlbumViewController.m; sourceTree = "<group>"; };
 		626F813C1BF31C8A00B77864 /* HMAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAlbumViewController.xib; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 				626F81061BF2D8A900B77864 /* AppDelegate.m */,
 				626F81081BF2D8A900B77864 /* ViewController.h */,
 				626F81091BF2D8A900B77864 /* ViewController.m */,
-				626F81371BF31C5F00B77864 /* HMImagePickerViewController.h */,
-				626F81381BF31C5F00B77864 /* HMImagePickerViewController.m */,
+				626F81371BF31C5F00B77864 /* HMPhotoPickerViewController.h */,
+				626F81381BF31C5F00B77864 /* HMPhotoPickerViewController.m */,
 				626F81AB1BF4839500B77864 /* HMPhotoBrowserViewController.h */,
 				626F81AC1BF4839500B77864 /* HMPhotoBrowserViewController.m */,
 				626F813A1BF31C8A00B77864 /* HMAlbumViewController.h */,
@@ -370,7 +370,7 @@
 				626F810A1BF2D8A900B77864 /* ViewController.m in Sources */,
 				626F81651BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.m in Sources */,
 				626F81481BF338F700B77864 /* HMAlbumTableViewCell.m in Sources */,
-				626F81391BF31C5F00B77864 /* HMImagePickerViewController.m in Sources */,
+				626F81391BF31C5F00B77864 /* HMPhotoPickerViewController.m in Sources */,
 				626F81071BF2D8A900B77864 /* AppDelegate.m in Sources */,
 				626F813D1BF31C8A00B77864 /* HMAlbumViewController.m in Sources */,
 				626F81AD1BF4839500B77864 /* HMPhotoBrowserViewController.m in Sources */,

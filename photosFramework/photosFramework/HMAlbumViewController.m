@@ -7,7 +7,7 @@
 //
 
 #import "HMAlbumViewController.h"
-#import "HMImagePickerViewController.h"
+#import "HMPhotoPickerViewController.h"
 #import "HMAlbumTableViewCell.h"
 #import <Photos/Photos.h>
 
@@ -77,7 +77,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   PHFetchResult *albumResult = _albumArr[indexPath.section];
   PHCollection *photoCollection = albumResult[indexPath.row];
-  HMImagePickerViewController *pickerImageView = [[HMImagePickerViewController alloc] init];
+  HMPhotoPickerViewController *pickerImageView = [[HMPhotoPickerViewController alloc] init];
   pickerImageView.photoCollection = photoCollection;
   [self.navigationController pushViewController:pickerImageView animated:YES];
   

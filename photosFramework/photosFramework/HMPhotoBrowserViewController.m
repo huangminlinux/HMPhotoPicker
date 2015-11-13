@@ -94,8 +94,9 @@
   UIButton *selectBtn = sender;
   selectBtn.selected = !selectBtn.selected;
   HMPhotoModel *currentPhotoModel = _allPhotoArr[[self currentIndex].item];
+    NSLog(@"huangmin model   %@",currentPhotoModel);
   currentPhotoModel.isSelected = selectBtn.selected;
-  [[NSNotificationCenter defaultCenter] postNotificationName:kSelectStatusChange object:currentPhotoModel.photoAssert];
+  [[NSNotificationCenter defaultCenter] postNotificationName:kSelectStatusChange object:currentPhotoModel];
 
 }
 

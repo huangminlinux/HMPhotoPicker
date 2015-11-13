@@ -42,7 +42,7 @@
   UIButton *selectBtn = (UIButton *)sender;
   selectBtn.selected = !selectBtn.selected;
   _thumbImageModel.isSelected = selectBtn.selected;
-  [[NSNotificationCenter defaultCenter] postNotificationName:kSelectStatusChange object:_thumbImageModel.photoAssert];
+  [[NSNotificationCenter defaultCenter] postNotificationName:kSelectStatusChange object:_thumbImageModel];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
-#import "HMImagePickerViewController.h"
+#import "HMPhotoPickerViewController.h"
 #import "HMPhotoModel.h"
 @interface ThumbImageCollectionViewCell : UICollectionViewCell
 - (void)setDataWithModel:(HMPhotoModel *)model imageManager:(PHCachingImageManager *)imageManager;
