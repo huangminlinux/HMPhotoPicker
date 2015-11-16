@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *albumTittle;
 @property (weak, nonatomic) PHCollection *albumCollection;
 
-- (void)setDataWithAlbumResult:(PHCollection *)albumCollection;
+- (void)setDataWithAlbumCollection:(PHCollection *)albumCollection;
+- (void)setDataWithAlbumResult:(PHFetchResult *)albumFetchResult;
 @end

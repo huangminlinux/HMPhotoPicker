@@ -71,9 +71,10 @@
   HMAlbumTableViewCell *cell = (HMAlbumTableViewCell *)[_albumTable dequeueReusableCellWithIdentifier:albumCellIdentify];
   PHFetchResult *albumResult = _albumArr[indexPath.section];
   if (indexPath.section == 0) {
+    [cell setDataWithAlbumResult:albumResult];
     return cell;
   }
-  [cell setDataWithAlbumResult:(PHCollection *)albumResult[indexPath.row]];
+  [cell setDataWithAlbumCollection:(PHCollection *)albumResult[indexPath.row]];
   return cell;
   
 }

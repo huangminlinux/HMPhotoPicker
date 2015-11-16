@@ -14,9 +14,6 @@
 		626F811D1BF2D8A900B77864 /* photosFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F811C1BF2D8A900B77864 /* photosFrameworkTests.m */; };
 		626F81281BF2D8A900B77864 /* photosFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81271BF2D8A900B77864 /* photosFrameworkUITests.m */; };
 		626F81361BF2D8BB00B77864 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626F81351BF2D8BB00B77864 /* Photos.framework */; };
-		626F81391BF31C5F00B77864 /* HMPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81381BF31C5F00B77864 /* HMPhotoPickerViewController.m */; };
-		626F813D1BF31C8A00B77864 /* HMAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F813B1BF31C8A00B77864 /* HMAlbumViewController.m */; };
-		626F813E1BF31C8A00B77864 /* HMAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626F813C1BF31C8A00B77864 /* HMAlbumViewController.xib */; };
 		626F81481BF338F700B77864 /* HMAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81461BF338F700B77864 /* HMAlbumTableViewCell.m */; };
 		626F81491BF338F700B77864 /* HMAlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626F81471BF338F700B77864 /* HMAlbumTableViewCell.xib */; };
 		626F814D1BF381E200B77864 /* ThumbImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F814B1BF381E200B77864 /* ThumbImageCollectionViewCell.m */; };
@@ -30,7 +27,10 @@
 		626F815E1BF38A1E00B77864 /* HMPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F815D1BF38A1E00B77864 /* HMPhotoModel.m */; };
 		626F81651BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81631BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.m */; };
 		626F81661BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626F81641BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.xib */; };
-		626F81AD1BF4839500B77864 /* HMPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626F81AC1BF4839500B77864 /* HMPhotoBrowserViewController.m */; };
+		62CF71201BF9A10500748C31 /* HMAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF711A1BF9A10500748C31 /* HMAlbumViewController.m */; };
+		62CF71211BF9A10500748C31 /* HMAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF711B1BF9A10500748C31 /* HMAlbumViewController.xib */; };
+		62CF71221BF9A10500748C31 /* HMPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF711D1BF9A10500748C31 /* HMPhotoBrowserViewController.m */; };
+		62CF71231BF9A10500748C31 /* HMPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF711F1BF9A10500748C31 /* HMPhotoPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +66,6 @@
 		626F81271BF2D8A900B77864 /* photosFrameworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photosFrameworkUITests.m; sourceTree = "<group>"; };
 		626F81291BF2D8A900B77864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626F81351BF2D8BB00B77864 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		626F81371BF31C5F00B77864 /* HMPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoPickerViewController.h; sourceTree = "<group>"; };
-		626F81381BF31C5F00B77864 /* HMPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoPickerViewController.m; sourceTree = "<group>"; };
-		626F813A1BF31C8A00B77864 /* HMAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAlbumViewController.h; sourceTree = "<group>"; };
-		626F813B1BF31C8A00B77864 /* HMAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAlbumViewController.m; sourceTree = "<group>"; };
-		626F813C1BF31C8A00B77864 /* HMAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAlbumViewController.xib; sourceTree = "<group>"; };
 		626F81451BF338F700B77864 /* HMAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAlbumTableViewCell.h; sourceTree = "<group>"; };
 		626F81461BF338F700B77864 /* HMAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAlbumTableViewCell.m; sourceTree = "<group>"; };
 		626F81471BF338F700B77864 /* HMAlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAlbumTableViewCell.xib; sourceTree = "<group>"; };
@@ -88,8 +83,13 @@
 		626F81621BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserCollectionViewCell.h; sourceTree = "<group>"; };
 		626F81631BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserCollectionViewCell.m; sourceTree = "<group>"; };
 		626F81641BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMPhotoBrowserCollectionViewCell.xib; sourceTree = "<group>"; };
-		626F81AB1BF4839500B77864 /* HMPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserViewController.h; sourceTree = "<group>"; };
-		626F81AC1BF4839500B77864 /* HMPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		62CF71191BF9A10500748C31 /* HMAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAlbumViewController.h; sourceTree = "<group>"; };
+		62CF711A1BF9A10500748C31 /* HMAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAlbumViewController.m; sourceTree = "<group>"; };
+		62CF711B1BF9A10500748C31 /* HMAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAlbumViewController.xib; sourceTree = "<group>"; };
+		62CF711C1BF9A10500748C31 /* HMPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserViewController.h; sourceTree = "<group>"; };
+		62CF711D1BF9A10500748C31 /* HMPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		62CF711E1BF9A10500748C31 /* HMPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoPickerViewController.h; sourceTree = "<group>"; };
+		62CF711F1BF9A10500748C31 /* HMPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoPickerViewController.m; sourceTree = "<group>"; };
 		62FE3CD21BF5C98600BD2A40 /* HMPhotoPickerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoPickerConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,13 +147,7 @@
 				626F81061BF2D8A900B77864 /* AppDelegate.m */,
 				626F81081BF2D8A900B77864 /* ViewController.h */,
 				626F81091BF2D8A900B77864 /* ViewController.m */,
-				626F81371BF31C5F00B77864 /* HMPhotoPickerViewController.h */,
-				626F81381BF31C5F00B77864 /* HMPhotoPickerViewController.m */,
-				626F81AB1BF4839500B77864 /* HMPhotoBrowserViewController.h */,
-				626F81AC1BF4839500B77864 /* HMPhotoBrowserViewController.m */,
-				626F813A1BF31C8A00B77864 /* HMAlbumViewController.h */,
-				626F813B1BF31C8A00B77864 /* HMAlbumViewController.m */,
-				626F813C1BF31C8A00B77864 /* HMAlbumViewController.xib */,
+				62CF71181BF9A10500748C31 /* Controller */,
 				626F81411BF334CD00B77864 /* Model */,
 				626F81401BF334BB00B77864 /* View */,
 				626F814F1BF3844300B77864 /* resources */,
@@ -227,6 +221,20 @@
 				626F81551BF3844300B77864 /* image_picked@3x.png */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		62CF71181BF9A10500748C31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71191BF9A10500748C31 /* HMAlbumViewController.h */,
+				62CF711A1BF9A10500748C31 /* HMAlbumViewController.m */,
+				62CF711B1BF9A10500748C31 /* HMAlbumViewController.xib */,
+				62CF711C1BF9A10500748C31 /* HMPhotoBrowserViewController.h */,
+				62CF711D1BF9A10500748C31 /* HMPhotoBrowserViewController.m */,
+				62CF711E1BF9A10500748C31 /* HMPhotoPickerViewController.h */,
+				62CF711F1BF9A10500748C31 /* HMPhotoPickerViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,9 +347,9 @@
 				626F814E1BF381E200B77864 /* ThumbImageCollectionViewCell.xib in Resources */,
 				626F815A1BF3844300B77864 /* image_picked@2x.png in Resources */,
 				626F81591BF3844300B77864 /* image_picked.png in Resources */,
-				626F813E1BF31C8A00B77864 /* HMAlbumViewController.xib in Resources */,
 				626F81661BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.xib in Resources */,
 				626F81571BF3844300B77864 /* image_no_picked@2x.png in Resources */,
+				62CF71211BF9A10500748C31 /* HMAlbumViewController.xib in Resources */,
 				626F815B1BF3844300B77864 /* image_picked@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,14 +377,14 @@
 			files = (
 				626F810A1BF2D8A900B77864 /* ViewController.m in Sources */,
 				626F81651BF42D5800B77864 /* HMPhotoBrowserCollectionViewCell.m in Sources */,
+				62CF71231BF9A10500748C31 /* HMPhotoPickerViewController.m in Sources */,
 				626F81481BF338F700B77864 /* HMAlbumTableViewCell.m in Sources */,
-				626F81391BF31C5F00B77864 /* HMPhotoPickerViewController.m in Sources */,
 				626F81071BF2D8A900B77864 /* AppDelegate.m in Sources */,
-				626F813D1BF31C8A00B77864 /* HMAlbumViewController.m in Sources */,
-				626F81AD1BF4839500B77864 /* HMPhotoBrowserViewController.m in Sources */,
 				626F814D1BF381E200B77864 /* ThumbImageCollectionViewCell.m in Sources */,
 				626F81041BF2D8A900B77864 /* main.m in Sources */,
 				626F815E1BF38A1E00B77864 /* HMPhotoModel.m in Sources */,
+				62CF71221BF9A10500748C31 /* HMPhotoBrowserViewController.m in Sources */,
+				62CF71201BF9A10500748C31 /* HMAlbumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

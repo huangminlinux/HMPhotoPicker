@@ -16,7 +16,7 @@
   _albumImage.layer.masksToBounds = YES;
 }
 
-- (void)setDataWithAlbumResult:(PHCollection *)albumCollection {
+- (void)setDataWithAlbumCollection:(PHCollection *)albumCollection {
   _albumTittle.text = albumCollection.localizedTitle;
 
   PHFetchResult *albumImagaAssert = [PHAsset fetchAssetsInAssetCollection:albumCollection options:nil];
@@ -30,9 +30,23 @@
   }
 }
 
+- (void)setDataWithAlbumResult:(PHFetchResult *)albumFetchResult {
+//  _albumTittle.text = albumCollection.localizedTitle;
+  
+  PHFetchResult *albumImagaAssert = albumFetchResult;
+  if (albumImagaAssert.count > 0) {
+    PHAsset *imageAsset = albumImagaAssert[albumImagaAssert.count - 1];
+    PHCachingImageManager *imageManage = [[PHCachingImageManager alloc] init];
+    
+    [imageManage requestImageForAsset:imageAsset targetSize:_albumImage.frame.size contentMode:PHImageContentModeDefault options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+      _albumImage.image = result;
+    }];
+  }
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+  self.backgroundColor = [UIColor whiteColor];
     // Configure the view for the selected state
 }
 
