@@ -18,6 +18,7 @@
 
 @interface HMPhotoPickerViewController : UIViewController
 @property (weak, nonatomic)id<HMPhotoPickerViewControllerDelegate> photoDelegate;
+@property (strong,nonatomic) PHFetchResult *allFetchResult;
 @property (strong, nonatomic)PHCollection *photoCollection;
 
 @end

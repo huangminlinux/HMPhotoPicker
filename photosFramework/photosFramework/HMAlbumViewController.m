@@ -37,7 +37,12 @@
   _albumTable.dataSource = self;
   
   self.title = @"相簿";
-  
+
+
+  PHFetchResult *albumResult = _albumArr[0];
+  HMPhotoPickerViewController *pickerImageView = [[HMPhotoPickerViewController alloc] init];
+    pickerImageView.allFetchResult = albumResult;
+  [self.navigationController pushViewController:pickerImageView animated:NO];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -48,7 +53,6 @@
   NSInteger numberOfRows = 0;
   
   if (section == 0) {
-    // The "All Photos" section only ever has a single row.
     numberOfRows = 1;
   } else {
     PHFetchResult *fetchResult = _albumArr[section];
@@ -78,8 +82,13 @@
   PHFetchResult *albumResult = _albumArr[indexPath.section];
   PHCollection *photoCollection = albumResult[indexPath.row];
   HMPhotoPickerViewController *pickerImageView = [[HMPhotoPickerViewController alloc] init];
-  pickerImageView.photoCollection = photoCollection;
-  [self.navigationController pushViewController:pickerImageView animated:YES];
+  if (indexPath.section == 0) {
+    pickerImageView.allFetchResult = albumResult;
+  } else {
+    pickerImageView.photoCollection = photoCollection;
+  }
+  
+  [self.navigationController pushViewController:pickerImageView animated:NO];
   
 }
 

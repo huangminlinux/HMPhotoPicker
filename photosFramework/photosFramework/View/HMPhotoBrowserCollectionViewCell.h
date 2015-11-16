@@ -13,5 +13,5 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *imageContent;
 
-- (void)setDataWithModel:(HMPhotoModel *)model imageManager:(PHCachingImageManager *)imageManager;
+- (void)setDataWithModel:(HMPhotoModel *)model;
 @end

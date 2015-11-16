@@ -15,12 +15,12 @@
 #define kPhotoGridViewFrame CGRectMake(0, 0, screenWidth,screenHeight - 45)
 #define kBrowserBtnFrame CGRectMake(13, 10, 35, 16)
 #define kSendBtnFrame CGRectMake(screenWidth - 45, 10, 35, 16)
+
 @interface HMPhotoPickerViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout>
 {
   UICollectionView *photoGridView;
   PHCachingImageManager *imageManager;
-  PHFetchResult *allFetchResult;
   NSMutableDictionary *selectedPhotoDic;// 已经选中的图片
   
   NSMutableArray *allPhotoArr;
@@ -36,7 +36,10 @@
   allPhotoArr = @[].mutableCopy;
 
   imageManager = [[PHCachingImageManager alloc] init];
-  allFetchResult = [PHAsset fetchAssetsInAssetCollection:_photoCollection options:nil];
+  if (_allFetchResult == nil) {
+    _allFetchResult = [PHAsset fetchAssetsInAssetCollection:_photoCollection options:nil];
+  }
+
 
   NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
   [defaultCenter addObserver:self selector:@selector(didSelectStatusChange:) name:kSelectStatusChange object:nil];
@@ -47,12 +50,11 @@
 }
 
 - (void)getAllPhoto {
-  PHFetchResult *allPhotoResult = [PHAsset fetchAssetsInAssetCollection:(PHAssetCollection *)_photoCollection options:nil];
-
+  PHFetchResult *allPhotoResult = _allFetchResult;
   for (int index = 0; index < [allPhotoResult count]; index ++) {
     PHAsset *asset = allPhotoResult[index];
     HMPhotoModel *model = [[HMPhotoModel alloc] init];
-    [model setDataWithAsset:asset];
+    [model setDataWithAsset:asset ImageManager:imageManager];
     [allPhotoArr addObject:model];
   }
   
@@ -84,6 +86,7 @@
   [browserBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
   [browserBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
   [bottomBar addSubview:browserBtn];
+  browserBtn.enabled = NO;
   [browserBtn addTarget:self action:@selector(clickToBrowserSelectedPhotos) forControlEvents:UIControlEventTouchUpInside];
   
   UIButton *sendBtn = [[UIButton alloc] initWithFrame:kSendBtnFrame];
@@ -99,7 +102,7 @@
   HMPhotoBrowserViewController *photoBrowserVC = [[HMPhotoBrowserViewController alloc] init];
   photoBrowserVC.photoCollection = _photoCollection;
   photoBrowserVC.imageManager = imageManager;
-  photoBrowserVC.allFetchResult = allFetchResult;
+  photoBrowserVC.allFetchResult = _allFetchResult;
   photoBrowserVC.allPhotoArr = [selectedPhotoDic allValues];
   NSIndexPath *browserIndex= [NSIndexPath indexPathForItem:0 inSection:0];
   photoBrowserVC.currentIndex = browserIndex;
@@ -107,9 +110,19 @@
 }
 
 - (void)sendSelectedPhoto {
-  if ([_photoDelegate respondsToSelector:@selector(HMPhotoPickerViewController:selectedPhotoArray:)]){
-//  [_photoDelegate HMPhotoPickerViewController:<#(HMPhotoPickerViewController *)#> selectedPhotoArray:<#(NSArray *)#>]
-  }
+//  if ([_photoDelegate respondsToSelector:@selector(HMPhotoPickerViewController:selectedPhotoArray:)]){
+    __block NSMutableArray *selectedImageArr = @[].mutableCopy;
+    for (NSString *key in selectedPhotoDic) {
+      HMPhotoModel *photoModel = selectedPhotoDic[key];
+      if (photoModel.largeImage == nil) {
+        NSLog(@"fail to get large image");
+        break;
+      }
+      [selectedImageArr addObject:photoModel.largeImage];
+    }
+  [_photoDelegate HMPhotoPickerViewController:self selectedPhotoArray:selectedImageArr];
+
+//  }
 
 }
 
@@ -158,7 +171,7 @@
   ThumbImageCollectionViewCell *cell = (ThumbImageCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 //  PHAsset *asset = allFetchResult[indexPath.item];
 //  [cell setDataWithAssert:asset imageManager:imageManager];
-  [cell setDataWithModel:allPhotoArr[indexPath.item] imageManager:imageManager];
+  [cell setDataWithModel:allPhotoArr[indexPath.item]];
   return cell;
 }
 
@@ -167,7 +180,7 @@ didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
   HMPhotoBrowserViewController *photoBrowserVC = [[HMPhotoBrowserViewController alloc] init];
   photoBrowserVC.photoCollection = _photoCollection;
   photoBrowserVC.imageManager = imageManager;
-  photoBrowserVC.allFetchResult = allFetchResult;
+  photoBrowserVC.allFetchResult = _allFetchResult;
   photoBrowserVC.allPhotoArr = allPhotoArr;
   photoBrowserVC.currentIndex = indexPath;
   [self.navigationController pushViewController:photoBrowserVC animated:YES];

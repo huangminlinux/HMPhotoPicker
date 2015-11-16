@@ -14,8 +14,10 @@
 @property(assign, nonatomic)BOOL isSelected;
 @property(assign, nonatomic)BOOL isOriginPhoto;
 @property(strong, nonatomic)PHAsset *photoAssert;
+@property(strong, nonatomic)PHCachingImageManager *CachingManager;
 
 @property(strong, nonatomic)UIImage *largeImage;
 @property(assign, nonatomic)CGSize largeImageSize;
-- (void)setDataWithAsset:(PHAsset *)asset;
+- (void)setDataWithAsset:(PHAsset *)asset ImageManager:(PHCachingImageManager *)imageManager;
+- (UIImage *)getLargeImageWithImageManager:(PHCachingImageManager *)imageManager;
 @end

@@ -128,7 +128,7 @@
   static NSString *CellIdentifier = @"HMPhotoBrowserCollectionViewCell";
   HMPhotoBrowserCollectionViewCell *cell = (HMPhotoBrowserCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
   HMPhotoModel *currentPhotoModel = _allPhotoArr[indexPath.item];
-  [cell setDataWithModel:currentPhotoModel imageManager:_imageManager];
+  [cell setDataWithModel:currentPhotoModel];
   
   return cell;
 }

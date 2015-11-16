@@ -19,7 +19,8 @@
   return self;
 }
 
-- (void)setDataWithAsset:(PHAsset *)asset {
+- (void)setDataWithAsset:(PHAsset *)asset ImageManager:(PHCachingImageManager *)imageManager {
+  _CachingManager = imageManager;
   _photoAssert = asset;
   CGSize imgSize;
   if (_isOriginPhoto) {
@@ -32,6 +33,39 @@
   }
   
   _largeImageSize = imgSize;
+}
+
+- (void)setIsSelected:(BOOL)isSelected {
+
+  _isSelected = isSelected;
+  if (isSelected) {
+    CGSize imgSize = CGSizeMake(_photoAssert.pixelHeight/2, _photoAssert.pixelWidth/2);
+    _largeImageSize = imgSize;
+    [_CachingManager requestImageForAsset:_photoAssert
+                               targetSize:imgSize
+                              contentMode:PHImageContentModeAspectFill
+                                  options:nil
+                            resultHandler:^(UIImage *result, NSDictionary *info) {
+                              _largeImage = result;
+                            }];
+  } else {
+    _largeImage = nil;
+  }
+}
+
+- (void)setIsOriginPhoto:(BOOL)isOriginPhoto {
+  _isOriginPhoto = isOriginPhoto;
+  if (_isSelected) {
+    CGSize imgSize = CGSizeMake(_photoAssert.pixelWidth, _photoAssert.pixelHeight);
+    _largeImageSize = imgSize;
+    [_CachingManager requestImageForAsset:_photoAssert
+                               targetSize:imgSize
+                              contentMode:PHImageContentModeAspectFill
+                                  options:nil
+                            resultHandler:^(UIImage *result, NSDictionary *info) {
+                              _largeImage = result;
+                            }];
+  }
 }
 
 @end

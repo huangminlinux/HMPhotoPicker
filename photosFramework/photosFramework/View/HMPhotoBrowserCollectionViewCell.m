@@ -106,7 +106,7 @@
 }
 
 
-- (void)setDataWithModel:(HMPhotoModel *)model imageManager:(PHCachingImageManager *)imageManager {
+- (void)setDataWithModel:(HMPhotoModel *)model {
   _photoModel = model;
   PHAsset *asset = model.photoAssert;
   _imageContent.frame = self.bounds;
@@ -116,7 +116,7 @@
   
   CGFloat scale = [UIScreen mainScreen].scale;
   CGSize imageSize = CGSizeMake(self.frame.size.width * scale, self.frame.size.width * scale);
-  [imageManager requestImageForAsset:asset
+  [model.CachingManager requestImageForAsset:asset
                           targetSize:imageSize
                          contentMode:PHImageContentModeAspectFill
                              options:nil

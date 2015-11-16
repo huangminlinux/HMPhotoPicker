@@ -21,13 +21,13 @@
   _thumbImage.contentMode = UIViewContentModeScaleAspectFill;
 }
 
-- (void)setDataWithModel:(HMPhotoModel *)model imageManager:(PHCachingImageManager *)imageManager {
+- (void)setDataWithModel:(HMPhotoModel *)model {
   _thumbImageModel = model;
   _seletStatusBtn.selected = model.isSelected;
   PHAsset *asset = model.photoAssert;
   CGFloat scale = [UIScreen mainScreen].scale;
   CGSize imageSize = CGSizeMake(self.frame.size.width * scale, self.frame.size.width * scale);
-  [imageManager requestImageForAsset:asset
+  [model.CachingManager requestImageForAsset:asset
                                targetSize:imageSize
                               contentMode:PHImageContentModeAspectFill
                                   options:nil

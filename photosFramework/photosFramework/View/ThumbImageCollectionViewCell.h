@@ -11,5 +11,5 @@
 #import "HMPhotoPickerViewController.h"
 #import "HMPhotoModel.h"
 @interface ThumbImageCollectionViewCell : UICollectionViewCell
-- (void)setDataWithModel:(HMPhotoModel *)model imageManager:(PHCachingImageManager *)imageManager;
+- (void)setDataWithModel:(HMPhotoModel *)model;
 @end
