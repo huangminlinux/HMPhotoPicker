@@ -7,7 +7,6 @@
 //
 
 #import "HMAlbumViewController.h"
-#import "HMPhotoPickerViewController.h"
 #import "HMAlbumTableViewCell.h"
 #import <Photos/Photos.h>
 

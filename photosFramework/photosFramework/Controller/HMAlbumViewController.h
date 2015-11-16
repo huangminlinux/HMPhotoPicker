@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
+#import "HMPhotoPickerViewController.h"
 
 @interface HMAlbumViewController : UIViewController
 

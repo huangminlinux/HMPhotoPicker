@@ -13,7 +13,6 @@
 @property (strong, nonatomic)PHCollection *photoCollection;
 @property (strong, nonatomic)PHCachingImageManager *imageManager;
 @property (strong, nonatomic)PHFetchResult *allFetchResult;
-//@property (strong, nonatomic)NSMutableArray *selectedPhotoArr;
 @property (strong, nonatomic)NSMutableArray *allPhotoArr;
 @property (assign, nonatomic)NSIndexPath *currentIndex;
 @end

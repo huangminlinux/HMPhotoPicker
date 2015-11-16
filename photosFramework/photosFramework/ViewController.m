@@ -53,6 +53,8 @@
   [imageManage requestImageForAsset:theassert targetSize:theImageView.frame.size contentMode:PHImageContentModeDefault options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
     theImageView.image = result;
   }];
+  
+  
 
 }
 
