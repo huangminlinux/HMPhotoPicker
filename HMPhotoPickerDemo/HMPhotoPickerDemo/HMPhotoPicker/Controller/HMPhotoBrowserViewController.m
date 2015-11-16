@@ -40,6 +40,10 @@ UIScrollViewDelegate>
   [self performSelector:@selector(updateSelectedBtn) withObject:nil afterDelay:0.1];
 }
 
+- (IBAction)ClickToSendImage:(id)sender {
+  [[NSNotificationCenter defaultCenter] postNotificationName:kFinishToSelectPhoto object:nil];
+}
+
 - (void)updateSelectedBtn {
   NSIndexPath *currentIndex = [self currentIndex];
   HMPhotoModel *currentPhotoModel = _allPhotoArr[currentIndex.item];
@@ -55,7 +59,6 @@ UIScrollViewDelegate>
   collectionView.delegate = self;
   collectionView.dataSource = self;
   collectionView.userInteractionEnabled = YES;
-//  collectionView.hidden = YES;
   UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                             action:@selector(tapContent:)];
   [collectionView addGestureRecognizer:gesture];
@@ -67,7 +70,6 @@ UIScrollViewDelegate>
     bottomBar.hidden = !bottomBar.hidden;
   }];
 }
-
 
 - (IBAction)ClickToBack:(id)sender {
   [self.navigationController popViewControllerAnimated:YES];

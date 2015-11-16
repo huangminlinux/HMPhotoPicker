@@ -90,6 +90,9 @@
                             <state key="normal" title="发送">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="ClickToSendImage:" destination="-1" eventType="touchUpInside" id="MfY-Vc-SiN"/>
+                            </connections>
                         </button>
                     </subviews>
                     <animations/>

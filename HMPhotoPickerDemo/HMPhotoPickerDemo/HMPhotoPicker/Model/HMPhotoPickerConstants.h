@@ -19,3 +19,4 @@
 
 
 static NSString * const kSelectStatusChange = @"SelectPhotoStatusChange";
+static NSString * const kFinishToSelectPhoto = @"FinishToSelectPhoto";

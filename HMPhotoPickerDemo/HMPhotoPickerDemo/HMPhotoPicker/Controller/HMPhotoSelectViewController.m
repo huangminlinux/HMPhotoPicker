@@ -48,6 +48,8 @@
   self.title = _photoCollection.localizedTitle;
   NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
   [defaultCenter addObserver:self selector:@selector(didSelectStatusChange:) name:kSelectStatusChange object:nil];
+  [defaultCenter addObserver:self selector:@selector(finshToSelectPhoto) name:kFinishToSelectPhoto object:nil];
+  
   [self getAllPhoto];
   [self setUpCollectionView];
 
@@ -81,17 +83,22 @@
 }
 
 - (IBAction)clickToBrowserSelectedPhotos:(id)sender {
-    HMPhotoBrowserViewController *photoBrowserVC = [[HMPhotoBrowserViewController alloc] init];
-    photoBrowserVC.photoCollection = _photoCollection;
-    photoBrowserVC.imageManager = imageManager;
-    photoBrowserVC.allFetchResult = _allFetchResult;
-    photoBrowserVC.allPhotoArr = [selectedPhotoDic allValues];
-    NSIndexPath *browserIndex= [NSIndexPath indexPathForItem:0 inSection:0];
-    photoBrowserVC.currentIndex = browserIndex;
-    [self.navigationController pushViewController:photoBrowserVC animated:YES];
+  HMPhotoBrowserViewController *photoBrowserVC = [[HMPhotoBrowserViewController alloc] init];
+  photoBrowserVC.photoCollection = _photoCollection;
+  photoBrowserVC.imageManager = imageManager;
+  photoBrowserVC.allFetchResult = _allFetchResult;
+  photoBrowserVC.photoDelegate = _photoDelegate;
+  photoBrowserVC.allPhotoArr = [selectedPhotoDic allValues];
+  NSIndexPath *browserIndex= [NSIndexPath indexPathForItem:0 inSection:0];
+  photoBrowserVC.currentIndex = browserIndex;
+  [self.navigationController pushViewController:photoBrowserVC animated:YES];
 }
 - (IBAction)sendSelectedPhotos:(id)sender {
-      if ([_photoDelegate respondsToSelector:@selector(HMPhotoPickerViewController:selectedPhotoArray:)]){
+  [self finshToSelectPhoto];
+}
+
+- (void)finshToSelectPhoto {
+  if ([_photoDelegate respondsToSelector:@selector(HMPhotoPickerViewController:selectedPhotoArray:)]){
     __block NSMutableArray *selectedImageArr = @[].mutableCopy;
     for (NSString *key in selectedPhotoDic) {
       HMPhotoModel *photoModel = selectedPhotoDic[key];
@@ -102,9 +109,9 @@
       [selectedImageArr addObject:photoModel.largeImage];
     }
     [_photoDelegate HMPhotoPickerViewController:self selectedPhotoArray:selectedImageArr];
-      }
+  }
+  [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
 
 - (void)didSelectStatusChange:(NSNotification *)notification {
   NSLog(@"get the notification %@",notification);
@@ -137,8 +144,6 @@
 
 #pragma mark - CollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-  //  PHFetchResult *allPhotoResult = [PHAsset fetchAssetsInAssetCollection:(PHAssetCollection *)_photoCollection options:nil];
-  //  return allPhotoResult.count;
   return allPhotoArr.count;
 }
 
@@ -166,6 +171,7 @@ didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
   photoBrowserVC.imageManager = imageManager;
   photoBrowserVC.allFetchResult = _allFetchResult;
   photoBrowserVC.allPhotoArr = allPhotoArr;
+  photoBrowserVC.photoDelegate = _photoDelegate;
   photoBrowserVC.currentIndex = indexPath;
   [self.navigationController pushViewController:photoBrowserVC animated:YES];
 }
