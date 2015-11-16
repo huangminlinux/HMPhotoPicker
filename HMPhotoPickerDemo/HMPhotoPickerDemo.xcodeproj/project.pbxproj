@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62CF71611BF9BCE400748C31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71601BF9BCE400748C31 /* main.m */; };
+		62CF71641BF9BCE400748C31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71631BF9BCE400748C31 /* AppDelegate.m */; };
+		62CF71671BF9BCE400748C31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71661BF9BCE400748C31 /* ViewController.m */; };
+		62CF716A1BF9BCE400748C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71681BF9BCE400748C31 /* Main.storyboard */; };
+		62CF716C1BF9BCE400748C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF716B1BF9BCE400748C31 /* Assets.xcassets */; };
+		62CF716F1BF9BCE400748C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CF716D1BF9BCE400748C31 /* LaunchScreen.storyboard */; };
+		62CF717A1BF9BCE400748C31 /* HMPhotoPickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71791BF9BCE400748C31 /* HMPhotoPickerDemoTests.m */; };
+		62CF71851BF9BCE400748C31 /* HMPhotoPickerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71841BF9BCE400748C31 /* HMPhotoPickerDemoUITests.m */; };
+		62CF71B01BF9BD6E00748C31 /* HMAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71951BF9BD6E00748C31 /* HMAlbumViewController.m */; };
+		62CF71B11BF9BD6E00748C31 /* HMAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71961BF9BD6E00748C31 /* HMAlbumViewController.xib */; };
+		62CF71B41BF9BD6E00748C31 /* HMPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF719D1BF9BD6E00748C31 /* HMPhotoModel.m */; };
+		62CF71B51BF9BD6E00748C31 /* image_no_picked.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A01BF9BD6E00748C31 /* image_no_picked.png */; };
+		62CF71B61BF9BD6E00748C31 /* image_no_picked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A11BF9BD6E00748C31 /* image_no_picked@2x.png */; };
+		62CF71B71BF9BD6E00748C31 /* image_no_picked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A21BF9BD6E00748C31 /* image_no_picked@3x.png */; };
+		62CF71B81BF9BD6E00748C31 /* image_picked.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A31BF9BD6E00748C31 /* image_picked.png */; };
+		62CF71B91BF9BD6E00748C31 /* image_picked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A41BF9BD6E00748C31 /* image_picked@2x.png */; };
+		62CF71BA1BF9BD6E00748C31 /* image_picked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A51BF9BD6E00748C31 /* image_picked@3x.png */; };
+		62CF71BB1BF9BD6E00748C31 /* HMAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71A81BF9BD6E00748C31 /* HMAlbumTableViewCell.m */; };
+		62CF71BC1BF9BD6E00748C31 /* HMAlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71A91BF9BD6E00748C31 /* HMAlbumTableViewCell.xib */; };
+		62CF71BD1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71AB1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.m */; };
+		62CF71BE1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71AC1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.xib */; };
+		62CF71BF1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71AE1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.m */; };
+		62CF71C01BF9BD6E00748C31 /* ThumbImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71AF1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.xib */; };
+		62CF71C41BF9C90500748C31 /* HMPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71C21BF9C90500748C31 /* HMPhotoPickerViewController.m */; };
+		62CF71C51BF9C90500748C31 /* HMPhotoPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71C31BF9C90500748C31 /* HMPhotoPickerViewController.xib */; };
+		62CF71C91BF9C95800748C31 /* HMPhotoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71C71BF9C95800748C31 /* HMPhotoSelectViewController.m */; };
+		62CF71CA1BF9C95800748C31 /* HMPhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71C81BF9C95800748C31 /* HMPhotoSelectViewController.xib */; };
+		62CF71CE1BF9D3C500748C31 /* HMPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF71CC1BF9D3C500748C31 /* HMPhotoBrowserViewController.m */; };
+		62CF71CF1BF9D3C500748C31 /* HMPhotoBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CF71CD1BF9D3C500748C31 /* HMPhotoBrowserViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62CF71761BF9BCE400748C31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62CF71541BF9BCE400748C31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62CF715B1BF9BCE400748C31;
+			remoteInfo = HMPhotoPickerDemo;
+		};
+		62CF71811BF9BCE400748C31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62CF71541BF9BCE400748C31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62CF715B1BF9BCE400748C31;
+			remoteInfo = HMPhotoPickerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62CF715C1BF9BCE400748C31 /* HMPhotoPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMPhotoPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CF71601BF9BCE400748C31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62CF71621BF9BCE400748C31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62CF71631BF9BCE400748C31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62CF71651BF9BCE400748C31 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		62CF71661BF9BCE400748C31 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		62CF71691BF9BCE400748C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62CF716B1BF9BCE400748C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62CF716E1BF9BCE400748C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62CF71701BF9BCE400748C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CF71751BF9BCE400748C31 /* HMPhotoPickerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMPhotoPickerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CF71791BF9BCE400748C31 /* HMPhotoPickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMPhotoPickerDemoTests.m; sourceTree = "<group>"; };
+		62CF717B1BF9BCE400748C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CF71801BF9BCE400748C31 /* HMPhotoPickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMPhotoPickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CF71841BF9BCE400748C31 /* HMPhotoPickerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMPhotoPickerDemoUITests.m; sourceTree = "<group>"; };
+		62CF71861BF9BCE400748C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CF71941BF9BD6E00748C31 /* HMAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAlbumViewController.h; sourceTree = "<group>"; };
+		62CF71951BF9BD6E00748C31 /* HMAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAlbumViewController.m; sourceTree = "<group>"; };
+		62CF71961BF9BD6E00748C31 /* HMAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAlbumViewController.xib; sourceTree = "<group>"; };
+		62CF719C1BF9BD6E00748C31 /* HMPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoModel.h; sourceTree = "<group>"; };
+		62CF719D1BF9BD6E00748C31 /* HMPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoModel.m; sourceTree = "<group>"; };
+		62CF719E1BF9BD6E00748C31 /* HMPhotoPickerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoPickerConstants.h; sourceTree = "<group>"; };
+		62CF71A01BF9BD6E00748C31 /* image_no_picked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_no_picked.png; sourceTree = "<group>"; };
+		62CF71A11BF9BD6E00748C31 /* image_no_picked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_no_picked@2x.png"; sourceTree = "<group>"; };
+		62CF71A21BF9BD6E00748C31 /* image_no_picked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_no_picked@3x.png"; sourceTree = "<group>"; };
+		62CF71A31BF9BD6E00748C31 /* image_picked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_picked.png; sourceTree = "<group>"; };
+		62CF71A41BF9BD6E00748C31 /* image_picked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_picked@2x.png"; sourceTree = "<group>"; };
+		62CF71A51BF9BD6E00748C31 /* image_picked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_picked@3x.png"; sourceTree = "<group>"; };
+		62CF71A71BF9BD6E00748C31 /* HMAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAlbumTableViewCell.h; sourceTree = "<group>"; };
+		62CF71A81BF9BD6E00748C31 /* HMAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAlbumTableViewCell.m; sourceTree = "<group>"; };
+		62CF71A91BF9BD6E00748C31 /* HMAlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAlbumTableViewCell.xib; sourceTree = "<group>"; };
+		62CF71AA1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserCollectionViewCell.h; sourceTree = "<group>"; };
+		62CF71AB1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserCollectionViewCell.m; sourceTree = "<group>"; };
+		62CF71AC1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMPhotoBrowserCollectionViewCell.xib; sourceTree = "<group>"; };
+		62CF71AD1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbImageCollectionViewCell.h; sourceTree = "<group>"; };
+		62CF71AE1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbImageCollectionViewCell.m; sourceTree = "<group>"; };
+		62CF71AF1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		62CF71C11BF9C90500748C31 /* HMPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoPickerViewController.h; sourceTree = "<group>"; };
+		62CF71C21BF9C90500748C31 /* HMPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoPickerViewController.m; sourceTree = "<group>"; };
+		62CF71C31BF9C90500748C31 /* HMPhotoPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMPhotoPickerViewController.xib; sourceTree = "<group>"; };
+		62CF71C61BF9C95800748C31 /* HMPhotoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoSelectViewController.h; sourceTree = "<group>"; };
+		62CF71C71BF9C95800748C31 /* HMPhotoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoSelectViewController.m; sourceTree = "<group>"; };
+		62CF71C81BF9C95800748C31 /* HMPhotoSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMPhotoSelectViewController.xib; sourceTree = "<group>"; };
+		62CF71CB1BF9D3C500748C31 /* HMPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserViewController.h; sourceTree = "<group>"; };
+		62CF71CC1BF9D3C500748C31 /* HMPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		62CF71CD1BF9D3C500748C31 /* HMPhotoBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMPhotoBrowserViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62CF71591BF9BCE400748C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CF71721BF9BCE400748C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CF717D1BF9BCE400748C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62CF71531BF9BCE400748C31 = {
+			isa = PBXGroup;
+			children = (
+				62CF715E1BF9BCE400748C31 /* HMPhotoPickerDemo */,
+				62CF71781BF9BCE400748C31 /* HMPhotoPickerDemoTests */,
+				62CF71831BF9BCE400748C31 /* HMPhotoPickerDemoUITests */,
+				62CF715D1BF9BCE400748C31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62CF715D1BF9BCE400748C31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62CF715C1BF9BCE400748C31 /* HMPhotoPickerDemo.app */,
+				62CF71751BF9BCE400748C31 /* HMPhotoPickerDemoTests.xctest */,
+				62CF71801BF9BCE400748C31 /* HMPhotoPickerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62CF715E1BF9BCE400748C31 /* HMPhotoPickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71621BF9BCE400748C31 /* AppDelegate.h */,
+				62CF71631BF9BCE400748C31 /* AppDelegate.m */,
+				62CF71651BF9BCE400748C31 /* ViewController.h */,
+				62CF71661BF9BCE400748C31 /* ViewController.m */,
+				62CF71681BF9BCE400748C31 /* Main.storyboard */,
+				62CF71921BF9BD6E00748C31 /* HMPhotoPicker */,
+				62CF716B1BF9BCE400748C31 /* Assets.xcassets */,
+				62CF716D1BF9BCE400748C31 /* LaunchScreen.storyboard */,
+				62CF71701BF9BCE400748C31 /* Info.plist */,
+				62CF715F1BF9BCE400748C31 /* Supporting Files */,
+			);
+			path = HMPhotoPickerDemo;
+			sourceTree = "<group>";
+		};
+		62CF715F1BF9BCE400748C31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71601BF9BCE400748C31 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62CF71781BF9BCE400748C31 /* HMPhotoPickerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71791BF9BCE400748C31 /* HMPhotoPickerDemoTests.m */,
+				62CF717B1BF9BCE400748C31 /* Info.plist */,
+			);
+			path = HMPhotoPickerDemoTests;
+			sourceTree = "<group>";
+		};
+		62CF71831BF9BCE400748C31 /* HMPhotoPickerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71841BF9BCE400748C31 /* HMPhotoPickerDemoUITests.m */,
+				62CF71861BF9BCE400748C31 /* Info.plist */,
+			);
+			path = HMPhotoPickerDemoUITests;
+			sourceTree = "<group>";
+		};
+		62CF71921BF9BD6E00748C31 /* HMPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71931BF9BD6E00748C31 /* Controller */,
+				62CF719B1BF9BD6E00748C31 /* Model */,
+				62CF719F1BF9BD6E00748C31 /* resources */,
+				62CF71A61BF9BD6E00748C31 /* View */,
+			);
+			path = HMPhotoPicker;
+			sourceTree = "<group>";
+		};
+		62CF71931BF9BD6E00748C31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71941BF9BD6E00748C31 /* HMAlbumViewController.h */,
+				62CF71951BF9BD6E00748C31 /* HMAlbumViewController.m */,
+				62CF71961BF9BD6E00748C31 /* HMAlbumViewController.xib */,
+				62CF71C61BF9C95800748C31 /* HMPhotoSelectViewController.h */,
+				62CF71C71BF9C95800748C31 /* HMPhotoSelectViewController.m */,
+				62CF71C81BF9C95800748C31 /* HMPhotoSelectViewController.xib */,
+				62CF71CB1BF9D3C500748C31 /* HMPhotoBrowserViewController.h */,
+				62CF71CC1BF9D3C500748C31 /* HMPhotoBrowserViewController.m */,
+				62CF71CD1BF9D3C500748C31 /* HMPhotoBrowserViewController.xib */,
+				62CF71C11BF9C90500748C31 /* HMPhotoPickerViewController.h */,
+				62CF71C21BF9C90500748C31 /* HMPhotoPickerViewController.m */,
+				62CF71C31BF9C90500748C31 /* HMPhotoPickerViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62CF719B1BF9BD6E00748C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62CF719C1BF9BD6E00748C31 /* HMPhotoModel.h */,
+				62CF719D1BF9BD6E00748C31 /* HMPhotoModel.m */,
+				62CF719E1BF9BD6E00748C31 /* HMPhotoPickerConstants.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		62CF719F1BF9BD6E00748C31 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71A01BF9BD6E00748C31 /* image_no_picked.png */,
+				62CF71A11BF9BD6E00748C31 /* image_no_picked@2x.png */,
+				62CF71A21BF9BD6E00748C31 /* image_no_picked@3x.png */,
+				62CF71A31BF9BD6E00748C31 /* image_picked.png */,
+				62CF71A41BF9BD6E00748C31 /* image_picked@2x.png */,
+				62CF71A51BF9BD6E00748C31 /* image_picked@3x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		62CF71A61BF9BD6E00748C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62CF71A71BF9BD6E00748C31 /* HMAlbumTableViewCell.h */,
+				62CF71A81BF9BD6E00748C31 /* HMAlbumTableViewCell.m */,
+				62CF71A91BF9BD6E00748C31 /* HMAlbumTableViewCell.xib */,
+				62CF71AA1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.h */,
+				62CF71AB1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.m */,
+				62CF71AC1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.xib */,
+				62CF71AD1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.h */,
+				62CF71AE1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.m */,
+				62CF71AF1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62CF715B1BF9BCE400748C31 /* HMPhotoPickerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CF71891BF9BCE400748C31 /* Build configuration list for PBXNativeTarget "HMPhotoPickerDemo" */;
+			buildPhases = (
+				62CF71581BF9BCE400748C31 /* Sources */,
+				62CF71591BF9BCE400748C31 /* Frameworks */,
+				62CF715A1BF9BCE400748C31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMPhotoPickerDemo;
+			productName = HMPhotoPickerDemo;
+			productReference = 62CF715C1BF9BCE400748C31 /* HMPhotoPickerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62CF71741BF9BCE400748C31 /* HMPhotoPickerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CF718C1BF9BCE400748C31 /* Build configuration list for PBXNativeTarget "HMPhotoPickerDemoTests" */;
+			buildPhases = (
+				62CF71711BF9BCE400748C31 /* Sources */,
+				62CF71721BF9BCE400748C31 /* Frameworks */,
+				62CF71731BF9BCE400748C31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62CF71771BF9BCE400748C31 /* PBXTargetDependency */,
+			);
+			name = HMPhotoPickerDemoTests;
+			productName = HMPhotoPickerDemoTests;
+			productReference = 62CF71751BF9BCE400748C31 /* HMPhotoPickerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		62CF717F1BF9BCE400748C31 /* HMPhotoPickerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CF718F1BF9BCE400748C31 /* Build configuration list for PBXNativeTarget "HMPhotoPickerDemoUITests" */;
+			buildPhases = (
+				62CF717C1BF9BCE400748C31 /* Sources */,
+				62CF717D1BF9BCE400748C31 /* Frameworks */,
+				62CF717E1BF9BCE400748C31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62CF71821BF9BCE400748C31 /* PBXTargetDependency */,
+			);
+			name = HMPhotoPickerDemoUITests;
+			productName = HMPhotoPickerDemoUITests;
+			productReference = 62CF71801BF9BCE400748C31 /* HMPhotoPickerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62CF71541BF9BCE400748C31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = HuminiOS;
+				TargetAttributes = {
+					62CF715B1BF9BCE400748C31 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					62CF71741BF9BCE400748C31 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 62CF715B1BF9BCE400748C31;
+					};
+					62CF717F1BF9BCE400748C31 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 62CF715B1BF9BCE400748C31;
+					};
+				};
+			};
+			buildConfigurationList = 62CF71571BF9BCE400748C31 /* Build configuration list for PBXProject "HMPhotoPickerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62CF71531BF9BCE400748C31;
+			productRefGroup = 62CF715D1BF9BCE400748C31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62CF715B1BF9BCE400748C31 /* HMPhotoPickerDemo */,
+				62CF71741BF9BCE400748C31 /* HMPhotoPickerDemoTests */,
+				62CF717F1BF9BCE400748C31 /* HMPhotoPickerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62CF715A1BF9BCE400748C31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CF71B51BF9BD6E00748C31 /* image_no_picked.png in Resources */,
+				62CF71C01BF9BD6E00748C31 /* ThumbImageCollectionViewCell.xib in Resources */,
+				62CF71C51BF9C90500748C31 /* HMPhotoPickerViewController.xib in Resources */,
+				62CF71CA1BF9C95800748C31 /* HMPhotoSelectViewController.xib in Resources */,
+				62CF716F1BF9BCE400748C31 /* LaunchScreen.storyboard in Resources */,
+				62CF716C1BF9BCE400748C31 /* Assets.xcassets in Resources */,
+				62CF71CF1BF9D3C500748C31 /* HMPhotoBrowserViewController.xib in Resources */,
+				62CF71B71BF9BD6E00748C31 /* image_no_picked@3x.png in Resources */,
+				62CF716A1BF9BCE400748C31 /* Main.storyboard in Resources */,
+				62CF71B91BF9BD6E00748C31 /* image_picked@2x.png in Resources */,
+				62CF71B81BF9BD6E00748C31 /* image_picked.png in Resources */,
+				62CF71B11BF9BD6E00748C31 /* HMAlbumViewController.xib in Resources */,
+				62CF71B61BF9BD6E00748C31 /* image_no_picked@2x.png in Resources */,
+				62CF71BA1BF9BD6E00748C31 /* image_picked@3x.png in Resources */,
+				62CF71BC1BF9BD6E00748C31 /* HMAlbumTableViewCell.xib in Resources */,
+				62CF71BE1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CF71731BF9BCE400748C31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CF717E1BF9BCE400748C31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62CF71581BF9BCE400748C31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CF71CE1BF9D3C500748C31 /* HMPhotoBrowserViewController.m in Sources */,
+				62CF71C91BF9C95800748C31 /* HMPhotoSelectViewController.m in Sources */,
+				62CF71C41BF9C90500748C31 /* HMPhotoPickerViewController.m in Sources */,
+				62CF71671BF9BCE400748C31 /* ViewController.m in Sources */,
+				62CF71BD1BF9BD6E00748C31 /* HMPhotoBrowserCollectionViewCell.m in Sources */,
+				62CF71641BF9BCE400748C31 /* AppDelegate.m in Sources */,
+				62CF71BB1BF9BD6E00748C31 /* HMAlbumTableViewCell.m in Sources */,
+				62CF71B41BF9BD6E00748C31 /* HMPhotoModel.m in Sources */,
+				62CF71BF1BF9BD6E00748C31 /* ThumbImageCollectionViewCell.m in Sources */,
+				62CF71611BF9BCE400748C31 /* main.m in Sources */,
+				62CF71B01BF9BD6E00748C31 /* HMAlbumViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CF71711BF9BCE400748C31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CF717A1BF9BCE400748C31 /* HMPhotoPickerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CF717C1BF9BCE400748C31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CF71851BF9BCE400748C31 /* HMPhotoPickerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62CF71771BF9BCE400748C31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62CF715B1BF9BCE400748C31 /* HMPhotoPickerDemo */;
+			targetProxy = 62CF71761BF9BCE400748C31 /* PBXContainerItemProxy */;
+		};
+		62CF71821BF9BCE400748C31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62CF715B1BF9BCE400748C31 /* HMPhotoPickerDemo */;
+			targetProxy = 62CF71811BF9BCE400748C31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62CF71681BF9BCE400748C31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62CF71691BF9BCE400748C31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62CF716D1BF9BCE400748C31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62CF716E1BF9BCE400748C31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62CF71871BF9BCE400748C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62CF71881BF9BCE400748C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62CF718A1BF9BCE400748C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HMPhotoPickerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuminiOS.HMPhotoPickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		62CF718B1BF9BCE400748C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HMPhotoPickerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuminiOS.HMPhotoPickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		62CF718D1BF9BCE400748C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HMPhotoPickerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuminiOS.HMPhotoPickerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HMPhotoPickerDemo.app/HMPhotoPickerDemo";
+			};
+			name = Debug;
+		};
+		62CF718E1BF9BCE400748C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HMPhotoPickerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuminiOS.HMPhotoPickerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HMPhotoPickerDemo.app/HMPhotoPickerDemo";
+			};
+			name = Release;
+		};
+		62CF71901BF9BCE400748C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HMPhotoPickerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuminiOS.HMPhotoPickerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HMPhotoPickerDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		62CF71911BF9BCE400748C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HMPhotoPickerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuminiOS.HMPhotoPickerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HMPhotoPickerDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62CF71571BF9BCE400748C31 /* Build configuration list for PBXProject "HMPhotoPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CF71871BF9BCE400748C31 /* Debug */,
+				62CF71881BF9BCE400748C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62CF71891BF9BCE400748C31 /* Build configuration list for PBXNativeTarget "HMPhotoPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CF718A1BF9BCE400748C31 /* Debug */,
+				62CF718B1BF9BCE400748C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		62CF718C1BF9BCE400748C31 /* Build configuration list for PBXNativeTarget "HMPhotoPickerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CF718D1BF9BCE400748C31 /* Debug */,
+				62CF718E1BF9BCE400748C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		62CF718F1BF9BCE400748C31 /* Build configuration list for PBXNativeTarget "HMPhotoPickerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CF71901BF9BCE400748C31 /* Debug */,
+				62CF71911BF9BCE400748C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62CF71541BF9BCE400748C31 /* Project object */;
+}
