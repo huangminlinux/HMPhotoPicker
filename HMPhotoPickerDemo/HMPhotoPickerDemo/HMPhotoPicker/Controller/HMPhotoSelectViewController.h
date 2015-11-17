@@ -12,11 +12,12 @@
 
 @protocol HMPhotoPickerViewControllerDelegate <NSObject>
 
-- (void)HMPhotoPickerViewController:(HMPhotoSelectViewController *)PhotoPickerVC selectedPhotoArray:(NSArray *)selected_photo_array;
+- (void)HMPhotoPickerViewController:(HMPhotoSelectViewController *)PhotoPickerVC
+                 selectedPhotoArray:(NSArray *)selected_photo_array;
 
 @end
 
-@interface HMPhotoSelectViewController : UIViewController
+@interface HMPhotoSelectViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic)id<HMPhotoPickerViewControllerDelegate> photoDelegate;
 @property (strong,nonatomic) PHFetchResult *allFetchResult;
 @property (strong, nonatomic)PHCollection *photoCollection;

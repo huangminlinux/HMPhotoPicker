@@ -30,13 +30,17 @@
   PHFetchResult *topLevelUserCollections = [PHCollectionList fetchTopLevelUserCollectionsWithOptions:nil];
 
   _albumArr = @[allPhotos, smartAlbums, topLevelUserCollections];
-  [_albumTable registerNib:[UINib nibWithNibName:@"HMAlbumTableViewCell" bundle:nil] forCellReuseIdentifier:@"HMAlbumTableViewCell"];
+  [_albumTable registerNib:[UINib nibWithNibName:@"HMAlbumTableViewCell" bundle:nil]
+    forCellReuseIdentifier:@"HMAlbumTableViewCell"];
   
   _albumTable.delegate = self;
   _albumTable.dataSource = self;
   
   self.title = @"相簿";
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消"
+                                                                           style:UIBarButtonItemStylePlain
+                                                                          target:self
+                                                                          action:@selector(cancel)];
   PHFetchResult *albumResult = _albumArr[0];
   HMPhotoSelectViewController *pickerImageView = [[HMPhotoSelectViewController alloc] init];
     pickerImageView.allFetchResult = albumResult;
@@ -62,6 +66,7 @@
     PHFetchResult *fetchResult = _albumArr[section];
     numberOfRows = fetchResult.count;
   }
+  
   return numberOfRows;
 }
 
@@ -74,10 +79,12 @@
   static NSString *albumCellIdentify = @"HMAlbumTableViewCell";
   HMAlbumTableViewCell *cell = (HMAlbumTableViewCell *)[_albumTable dequeueReusableCellWithIdentifier:albumCellIdentify];
   PHFetchResult *albumResult = _albumArr[indexPath.section];
+  
   if (indexPath.section == 0) {
     [cell setDataWithAlbumResult:albumResult];
     return cell;
   }
+  
   [cell setDataWithAlbumCollection:(PHCollection *)albumResult[indexPath.row]];
   return cell;
   
@@ -87,11 +94,13 @@
   PHFetchResult *albumResult = _albumArr[indexPath.section];
   PHCollection *photoCollection = albumResult[indexPath.row];
   HMPhotoSelectViewController *pickerImageView = [[HMPhotoSelectViewController alloc] init];
+  
   if (indexPath.section == 0) {
     pickerImageView.allFetchResult = albumResult;
   } else {
     pickerImageView.photoCollection = photoCollection;
   }
+  
   pickerImageView.photoDelegate = _photoDelegate;
   [self.navigationController pushViewController:pickerImageView animated:NO];
   

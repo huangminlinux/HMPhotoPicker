@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HMPhotoSelectViewController.h"
 @interface HMPhotoPickerViewController : UINavigationController
-
+@property (weak, nonatomic)id<HMPhotoPickerViewControllerDelegate> photoDelegate;
 @end

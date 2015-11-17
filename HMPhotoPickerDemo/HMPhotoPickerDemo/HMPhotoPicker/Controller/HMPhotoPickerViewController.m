@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   _albumVC = [[HMAlbumViewController alloc] init];
+  _albumVC.photoDelegate = _photoDelegate;
   [self pushViewController:_albumVC animated:NO];
 }
 

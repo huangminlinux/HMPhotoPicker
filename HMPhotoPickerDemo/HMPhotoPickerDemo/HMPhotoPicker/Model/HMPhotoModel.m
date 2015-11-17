@@ -23,12 +23,12 @@
   _CachingManager = imageManager;
   _photoAssert = asset;
   CGSize imgSize;
+  
   if (_isOriginPhoto) {
     imgSize = CGSizeMake(asset.pixelWidth, asset.pixelHeight);
   } else {
     imgSize = [[UIScreen mainScreen] bounds].size;
     CGFloat imgScale = [[UIScreen mainScreen] scale];
-    
     imgSize = CGSizeMake(imgSize.width * imgScale, imgSize.height * imgScale);
   }
   
@@ -36,8 +36,8 @@
 }
 
 - (void)setIsSelected:(BOOL)isSelected {
-
   _isSelected = isSelected;
+  
   if (isSelected) {
     CGSize imgSize = CGSizeMake(_photoAssert.pixelHeight/2, _photoAssert.pixelWidth/2);
     _largeImageSize = imgSize;
@@ -55,6 +55,7 @@
 
 - (void)setIsOriginPhoto:(BOOL)isOriginPhoto {
   _isOriginPhoto = isOriginPhoto;
+  
   if (_isSelected) {
     CGSize imgSize = CGSizeMake(_photoAssert.pixelWidth, _photoAssert.pixelHeight);
     _largeImageSize = imgSize;

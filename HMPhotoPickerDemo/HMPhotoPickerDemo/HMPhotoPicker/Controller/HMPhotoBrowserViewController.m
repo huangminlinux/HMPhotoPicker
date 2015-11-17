@@ -29,14 +29,15 @@ UIScrollViewDelegate>
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view.
   [self.navigationController setNavigationBarHidden:YES];
   [self setupCollectionView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [self.view layoutIfNeeded];
-  [collectionView scrollToItemAtIndexPath:_currentIndex atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+  [collectionView scrollToItemAtIndexPath:_currentIndex
+                         atScrollPosition:UICollectionViewScrollPositionLeft
+                                 animated:NO];
   [self performSelector:@selector(updateSelectedBtn) withObject:nil afterDelay:0.1];
 }
 
@@ -55,7 +56,8 @@ UIScrollViewDelegate>
   [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
   collectionView.pagingEnabled = YES;
   [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"gradientCell"];
-  [collectionView registerNib:[UINib nibWithNibName:@"HMPhotoBrowserCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"HMPhotoBrowserCollectionViewCell"];
+  [collectionView registerNib:[UINib nibWithNibName:@"HMPhotoBrowserCollectionViewCell" bundle:nil]
+   forCellWithReuseIdentifier:@"HMPhotoBrowserCollectionViewCell"];
   collectionView.delegate = self;
   collectionView.dataSource = self;
   collectionView.userInteractionEnabled = YES;
@@ -91,7 +93,7 @@ UIScrollViewDelegate>
 }
 
 - (void)tapContent:(UIGestureRecognizer *)gesture {
-//  [self hidenAllBar];
+
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

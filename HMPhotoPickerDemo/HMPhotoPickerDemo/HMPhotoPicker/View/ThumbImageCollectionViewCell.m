@@ -32,7 +32,6 @@
                               contentMode:PHImageContentModeAspectFill
                                   options:nil
                             resultHandler:^(UIImage *result, NSDictionary *info) {
-                              // Set the cell's thumbnail image if it's still showing the same asset.
                               if ([_thumbImageModel.photoAssert.localIdentifier isEqualToString:asset.localIdentifier]) {
                                 self.thumbImage.image = result;
                               }

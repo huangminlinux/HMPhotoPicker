@@ -20,6 +20,7 @@
   _albumTittle.text = albumCollection.localizedTitle;
 
   PHFetchResult *albumImagaAssert = [PHAsset fetchAssetsInAssetCollection:albumCollection options:nil];
+  
   if (albumImagaAssert.count > 0) {
     PHAsset *imageAsset = albumImagaAssert[albumImagaAssert.count - 1];
     PHCachingImageManager *imageManage = [[PHCachingImageManager alloc] init];
@@ -34,11 +35,14 @@
   _albumTittle.text = @"相机胶卷";
   
   PHFetchResult *albumImagaAssert = albumFetchResult;
+  
   if (albumImagaAssert.count > 0) {
     PHAsset *imageAsset = albumImagaAssert[albumImagaAssert.count - 1];
     PHCachingImageManager *imageManage = [[PHCachingImageManager alloc] init];
-    
-    [imageManage requestImageForAsset:imageAsset targetSize:_albumImage.frame.size contentMode:PHImageContentModeDefault options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+    [imageManage requestImageForAsset:imageAsset
+                           targetSize:_albumImage.frame.size
+                          contentMode:PHImageContentModeDefault
+                              options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
       _albumImage.image = result;
     }];
   }

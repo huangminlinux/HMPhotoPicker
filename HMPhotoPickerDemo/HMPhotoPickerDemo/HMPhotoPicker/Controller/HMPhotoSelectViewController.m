@@ -36,11 +36,14 @@
   [super viewDidLoad];
   selectedPhotoDic = @{}.mutableCopy;
   allPhotoArr = @[].mutableCopy;
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消"
+                                                                           style:UIBarButtonItemStylePlain
+                                                                          target:self
+                                                                          action:@selector(cancel)];
   
   selectedPhotoLabel.layer.masksToBounds = YES;
   selectedPhotoLabel.layer.cornerRadius = selectedPhotoLabel.frame.size.height / 2;
-
+  
   imageManager = [[PHCachingImageManager alloc] init];
   if (_allFetchResult == nil) {
     _allFetchResult = [PHAsset fetchAssetsInAssetCollection:_photoCollection options:nil];
@@ -52,7 +55,6 @@
   
   [self getAllPhoto];
   [self setUpCollectionView];
-
 }
 
 - (void)cancel{
@@ -67,7 +69,6 @@
     [model setDataWithAsset:asset ImageManager:imageManager];
     [allPhotoArr addObject:model];
   }
-  
 }
 
 - (void)setUpCollectionView {
@@ -76,6 +77,12 @@
   [photoGridView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"gradientCell"];
   [photoGridView registerNib:[UINib nibWithNibName:@"ThumbImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ThumbImageCollectionViewCell"];
   [self.view addSubview:photoGridView];
+  UICollectionViewFlowLayout *collectLayout = (UICollectionViewFlowLayout *)photoGridView.collectionViewLayout;
+
+  if ([UINavigationBar appearance].translucent == YES) {
+    collectLayout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 64);
+  }
+  
   photoGridView.backgroundColor = [UIColor whiteColor];
   photoGridView.delegate = self;
   photoGridView.dataSource = self;
@@ -100,12 +107,15 @@
 - (void)finshToSelectPhoto {
   if ([_photoDelegate respondsToSelector:@selector(HMPhotoPickerViewController:selectedPhotoArray:)]){
     __block NSMutableArray *selectedImageArr = @[].mutableCopy;
+    
     for (NSString *key in selectedPhotoDic) {
       HMPhotoModel *photoModel = selectedPhotoDic[key];
+      
       if (photoModel.largeImage == nil) {
         NSLog(@"fail to get large image");
         break;
       }
+      
       [selectedImageArr addObject:photoModel.largeImage];
     }
     [_photoDelegate HMPhotoPickerViewController:self selectedPhotoArray:selectedImageArr];
@@ -118,6 +128,7 @@
   
   HMPhotoModel *model = notification.object;
   NSLog(@"huangmin model  %@",model);
+  
   if (selectedPhotoDic[model.photoAssert] == nil) {
     
     [selectedPhotoDic setObject:model forKey:model.photoAssert];
@@ -130,7 +141,7 @@
     selectedPhotoLabel.hidden = NO;
     selectedPhotoLabel.text = [NSString stringWithFormat:@"%ld",[selectedPhotoDic count]];
     sendBtn.enabled = YES;
-  } else{
+  } else {
     browserBtn.enabled = NO;
     selectedPhotoLabel.hidden = YES;
     sendBtn.enabled = NO;
@@ -158,8 +169,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *CellIdentifier = @"ThumbImageCollectionViewCell";
   ThumbImageCollectionViewCell *cell = (ThumbImageCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-  //  PHAsset *asset = allFetchResult[indexPath.item];
-  //  [cell setDataWithAssert:asset imageManager:imageManager];
   [cell setDataWithModel:allPhotoArr[indexPath.item]];
   return cell;
 }
@@ -179,7 +188,6 @@ didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
-
 }
 
 
